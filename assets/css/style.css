@@ -1,0 +1,145 @@
+
+html {
+	font-size: 62.5%;
+}
+
+/* body {
+	background-image: url(/assets/images-other/hexagons-background.jpg);
+
+} */
+
+nav {
+	margin: 2rem;
+}
+
+ul {
+	display: flex;
+	flex-direction: row;
+	height: 4rem;
+	padding: 1rem;
+}
+
+li {
+	flex: 1 0 50%;
+	font-size: 3rem;
+}
+
+li a {
+	text-decoration: none;
+}
+
+section {
+	justify-content: center;
+	text-align: center;
+}
+
+.intro h1 {
+	margin-top: 2rem;
+	font-size: 4rem;
+}
+
+section p {
+	font-size: 2rem;
+	margin: 1rem;
+}
+
+button {
+	padding: 3rem;
+	font-size: 2rem;
+	border-radius: 3rem;
+}
+
+.high-score {
+	text-align: start;
+}
+
+.timer {
+	text-align: end;
+}
+
+.intro {
+	display: block;
+}
+
+.quiz {
+	display: none;
+	margin: 0 auto;
+	max-width: 40rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+}
+
+.startButton {
+	text-align: center;
+}
+
+button {
+	width: 20rem;
+	height: 4rem;
+	margin: 1rem;
+	padding: 0px;
+	text-align: center;
+}
+button:hover {
+	background-color: ghostwhite;
+	border-color: crimson;
+}
+
+/* created elements */
+
+.sectionEl {
+	display: block;
+}
+
+.h1El {
+	margin: 0 auto;
+	font-size: 2.5rem;
+	text-align: center;
+}
+.h2El {
+	margin: 1rem 0;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.labelEl {
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+.inputEl {
+	padding: .6rem;
+}
+
+.sectionEl .buttonEl {
+	padding: 0;
+	font-size: 1.7rem;
+	width: 5rem;
+	height: 3rem;
+	text-align: center;
+	margin-left: 1rem;
+}
+
+.wrong {
+	font-size: 1.2rem;
+	color: crimson;
+}
+
+.linkBack {
+	font-size: 3rem;
+	text-decoration: none;
+}
+
+.highScore {
+	color: crimson;
+	font-size: 4rem;
+	margin-bottom: 2rem;
+}
+
+.nameScore {
+	font-size: 2rem;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Code Quiz</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="high-score">
+          <a href="./high-score.html">View High Score</a>
+        </li>
+        <li id="timer" class="timer"></li>
+      </ul>
+    </nav>
+    <main>
+      <body>
+        <section id="intro" class="intro">
+          <h1>Code Quiz</h1>
+          <p>Prepare to play the game</p>
+          <button id="startButton" class="startButton">Start</button>
+        </section>
+        <br />
+        <section id="quiz" class="quiz">
+          <h2 id="question"></h2>
+          <button id="b1" class="quizB"></button>
+          <button id="b2" class="quizB"></button>
+          <button id="b3" class="quizB"></button>
+          <button id="b4" class="quizB"></button>
+          <p id="wrong" class="wrong"></p>
+        </section>
+      </body>
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
