@@ -9,13 +9,8 @@ function renderScore () {
 	for (var i = 0; i < highScoresList.length; i++) {
 		var highS = highScoresList[i];
 		var liEl = document.createElement("li");
-		
-		liEl.textContent = `Name: ${highS.name} Score: ${highS.score}`; 
-
-		// `Name: ${highScores[i].name} Score: ${highScores[i].score}`;
-		
+		liEl.textContent = `${highS.name} ${highS.score}`; 
 		liEl.setAttribute("data-index", i);
-		
 		olEl.appendChild(liEl);
 	}
 };
@@ -31,22 +26,3 @@ function init() {
 
 
 init();
-
-
-
-
-
-
-// for (var i = 0; i < highScores.length; i++) {
-// 	function renderScore() {
-// 		var highS = highScoresList[i];
-
-// 		var liEl = document.createElement("li");
-// 			liEl.textContent = `Name: ${highScores[i].name} Score: ${highScores[i].score}`
-// 			liEl.setAttribute("data-index", i);
-			
-// 			olEl.appendChild(liEl);
-// 	};
-// };
-
-renderScore();

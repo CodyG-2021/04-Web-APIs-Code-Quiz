@@ -3,11 +3,6 @@ html {
 	font-size: 62.5%;
 }
 
-/* body {
-	background-image: url(/assets/images-other/hexagons-background.jpg);
-
-} */
-
 nav {
 	margin: 2rem;
 }
@@ -39,14 +34,29 @@ section {
 }
 
 section p {
+	width: 50rem;
 	font-size: 2rem;
-	margin: 1rem;
+	margin: 1rem auto;
 }
 
 button {
 	padding: 3rem;
 	font-size: 2rem;
 	border-radius: 3rem;
+	width: 20rem;
+	height: 4rem;
+	margin: 1rem;
+	padding: 0px;
+	text-align: center;
+}
+button:hover {
+	background-color: ghostwhite;
+	border-color: crimson;
+}
+
+h2 {
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
 }
 
 .high-score {
@@ -67,25 +77,8 @@ button {
 	max-width: 40rem;
 }
 
-h2 {
-	font-size: 2.5rem;
-	margin-bottom: 2rem;
-}
-
 .startButton {
 	text-align: center;
-}
-
-button {
-	width: 20rem;
-	height: 4rem;
-	margin: 1rem;
-	padding: 0px;
-	text-align: center;
-}
-button:hover {
-	background-color: ghostwhite;
-	border-color: crimson;
 }
 
 /* created elements */
@@ -124,8 +117,19 @@ button:hover {
 	margin-left: 1rem;
 }
 
+.sectionEl .buttonEl {
+	padding: 0;
+	font-size: 1.7rem;
+	width: 5rem;
+	height: 3rem;
+	text-align: center;
+	margin-left: 1rem;
+}
+
 .wrong {
-	font-size: 1.2rem;
+	width: 20rem;
+	margin: 1rem auto;
+	font-size: 2.2rem;
 	color: crimson;
 }
 

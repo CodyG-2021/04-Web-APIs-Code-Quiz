@@ -1,3 +1,4 @@
+//Link elements by ID
 var startButton = document.querySelector("#startButton");
 var timerEl = document.querySelector('#timer');
 
@@ -10,61 +11,64 @@ var b4El = document.querySelector('#b4');
 var introEl = document.querySelector("#intro");
 var quizEl = document.querySelector("#quiz");
 
+//Questions and Answers
 var questions = [
 	{
-		question: "Here is the first Question",
-		q1: "Correct",
-		q2: "B",
-		q3: "C",
-		q4: "D",
-		answer: "Correct"
+		question: "Who was the first Avenger?",
+		q1: "Capitan America",
+		q2: "Hulk",
+		q3: "Iron Man",
+		q4: "Hawkeye",
+		answer: "Capitan America"
 	},
-	// {
-	// 	question: "Lets see if this worked",
-	// 	q1: "Apple",
-	// 	q2: "Dog",
-	// 	q3: "It's Cat",
-	// 	q4: "Blue",
-	// 	answer: "It's Cat"
-	// },
-	// {
-	// 	question: "Lets see if this worked 2",
-	// 	q1: "Apple",
-	// 	q2: "It's Dog",
-	// 	q3: "Cat",
-	// 	q4: "Blue",
-	// 	answer: "It's Dog"
-	// },
-	// {
-	// 	question: "Lets see if this worked 3",
-	// 	q1: "Apple",
-	// 	q2: "It's Dog",
-	// 	q3: "Cat",
-	// 	q4: "Blue",
-	// 	answer: "It's Dog"
-	// },
-	// {
-	// 	question: "Lets see if this worked 4",
-	// 	q1: "Apple",
-	// 	q2: "It's Dog",
-	// 	q3: "Cat",
-	// 	q4: "Blue",
-	// 	answer: "It's Dog"
-	// },
 	{
-		question: "Lets see if this worked 5",
-		q1: "Apple",
-		q2: "It's Dog",
-		q3: "Cat",
-		q4: "Blue",
-		answer: "It's Dog"
+		question: "Who does Bruce Banner turn into when he's angry?",
+		q1: "Abomination",
+		q2: "Hulk",
+		q3: "Hercules",
+		q4: "Sentry",
+		answer: "Hulk"
+	},
+	{
+		question: "Who does Galactus use as a henchman?",
+		q1: "Magneto",
+		q2: "Silver Surfer",
+		q3: "Professor X",
+		q4: "Wolverine",
+		answer: "Silver Surfer"
+	},
+	{
+		question: "Who is Tony Stark?",
+		q1: "Iron Monger",
+		q2: "Whiplash",
+		q3: "War Machine",
+		q4: "Iron Man",
+		answer: "Iron Man"
+	},
+	{
+		question: "Who wants all the Infinity Stones?",
+		q1: "Thor",
+		q2: "Thanos",
+		q3: "Galactus",
+		q4: "Dr. Strange",
+		answer: "Thanos"
+	},
+	{
+		question: "Who is the coolest?",
+		q1: "Not this one",
+		q2: "Not this one",
+		q3: "Not this one",
+		q4: "Hulk",
+		answer: "Hulk"
 	}];
 
+//Initial variables
 var userScore;
-var secondsLeft = 30;
+var secondsLeft = 60;
 var questionIndex = 0;
-
 var timeInt;
+
+//Start the timer
 function startTimer() {
 	timeInt = setInterval(
 		function () {
@@ -91,10 +95,6 @@ function startQuiz() {
 	loadQuestions();
 };
 
-
-//Could create a for loop here
-
-
 //Load the questions based on the index
 function loadQuestions() {
 	questionEl.textContent = questions[questionIndex].question;
@@ -104,6 +104,7 @@ function loadQuestions() {
 	b4El.textContent = `${questions[questionIndex].q4}`;
 };
 
+//Validate the users choices
 var wrongEl = document.querySelector("#wrong");
 quizEl.addEventListener("click", function (event) {
 	var element = event.target;
@@ -122,7 +123,6 @@ quizEl.addEventListener("click", function (event) {
 				//Ran through all the questions - finish
 				alert("All Done!");
 				userScore = secondsLeft;
-				// saveScore();
 				clearInterval(timeInt);
 				timerEl.textContent = " ";
 				enterHiSc();
@@ -132,7 +132,6 @@ quizEl.addEventListener("click", function (event) {
 			wrongEl.textContent = "Incorrect -5 seconds";
 			if (secondsLeft <= 0) {
 				userScore = 0;
-				// saveScore();
 				clearInterval(timeInt);
 				timerEl.textContent = " ";
 				alert("Ran out of time!");
@@ -143,7 +142,6 @@ quizEl.addEventListener("click", function (event) {
 });
 
 //Just to see if I could do it, made the elements in JS for the enter high score part.
-
 var mainEl = document.querySelector('main');
 var sectionEl = document.createElement("section");
 var h1El = document.createElement("h1");
@@ -154,7 +152,6 @@ var buttonEl = document.createElement("button");
 
 function enterHiSc() {
 	quizEl.setAttribute("style", "display: none");
-	console.log(userScore);
 
 	mainEl.appendChild(sectionEl);
 	sectionEl.appendChild(h1El);
@@ -168,12 +165,12 @@ function enterHiSc() {
 	h2El.setAttribute("class", "h2El");
 	labelEl.setAttribute("class", "labelEl");
 	inputEl.setAttribute("class", "inputEl");
-	inputEl.setAttribute("placeholder", "John Smith...");
+	inputEl.setAttribute("placeholder", "...");
 	buttonEl.setAttribute("class", "buttonEl");
 
-	h1El.textContent = "H1 Loaded";
+	h1El.textContent = "Thanks for playing!";
 	h2El.textContent = `Your score is ${userScore}.`;
-	labelEl.textContent = "Please enter your name: ";
+	labelEl.textContent = "Please enter your initials: ";
 	buttonEl.textContent = "Post";
 
 	//Save values to array
@@ -191,5 +188,6 @@ function enterHiSc() {
 		localStorage.setItem("highScores", JSON.stringify(highScore));
 	});
 };
+
 
 
