@@ -15,7 +15,3 @@ Below is a screen shot of the Quiz:
 Below is a link to the site:
 
 https://codyg-2021.github.io/04-Web-APIs-Code-Quiz/
-
-A note from Cody:
-
-*Just like the last JS assignment this was a struggle. Luckily I stayed for some office hours and got some help.*
